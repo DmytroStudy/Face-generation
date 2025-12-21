@@ -2,8 +2,9 @@ import pandas as pd
 from imported_notebook import load_generator, generate_faces
 
 def generate (generator):
-    male = int(input("Male face (0/1): "))
-
+    male = input("Male face (0/1): ")
+    if male != '1' and male != '0': return
+    male = int(male)
     generate_faces(generator, male, 1)
 
 if __name__ == "__main__":
